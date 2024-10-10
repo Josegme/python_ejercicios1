@@ -28,4 +28,10 @@ Atributo de Clase: Es una propiedad que tendrán todos los objetos con nuestra c
 
 Método: es una función que existe de una clase.
 
+Podemos mencionar también los pilares de la programación orientada a objetos
+ABSTRACCIÓN: Son los datos necesarios de una clase. Si elaboramos un menú de un restaurant
+es necesario el nombre del plato, descripción y precio, otros datos como 
+el color favorito del chef no son necesarios. (agregamos solo lo necesario para el objeto)
+
+
 
