@@ -1,0 +1,266 @@
+1. Que es Programar?
+2. Divivir los Problemas en partes pequeñas para ir resolviendo por partes
+3. Lenguajes de Programación
+4. Escribir en Código Fuente
+5. Ejecutar el codigo Fuente. 
+        Existen tres tipos: Compilados (C o C++) - Interpretados (php - JavaScript) - Combinación (Java - C# - Python)
+6. IDE (o Editores de Texto: Entorno de Desarrollo Integrado)
+    existe una variedad que dependen del Lenguaje o la utilidad. 
+    el autocompletado de código - detección de error - aviso de errores
+7. VSC - Instalar VSC - Gratis y multiplataforma
+8/9. Instalar extensiones utiles. (Androi studio para elaborar aplicaciones)
+    la extension del archivo determina el lenguaje con el que voy a programar. 
+10. PYTHON: funciona en LINUX - MAC - WINDOWS - Facil de aprender - facil de ejecutar - Alta utilidad para crear con sitaxis muy sencilla
+11. Instalar Python - 
+=====================Sección 5 ============================
+Fundamentos de Programación - Variables y Tipos de datos
+13. Variables: 
+    es un contenedor para un valor - Existen palabras reservadas para una variable o funcionalidad
+    hay que especificar el tipo de dato para indicar que tipo de valor va a tener esa variable
+    nombre = valor (existen reglas para crear variables.)
+        no se puede inicar una variable con un numero
+        se utiliza camelCase - flat case - keba case o dash
+    en python se utiliza mas Snake Case (Camel case para POO)
+        es Sensible a Mayusculas Hola != Hola
+        "" o '' para escribir String
+14. TIPOS DE datos
+    Cada lenguaje tiene tipos de datos para asociar a las variables a ese tipo
+String o Cadena de texto 
+nombre = "Juan" 
+Integer o Enteros
+likes = 201
+Floats o Flotantes
+total_pagar = 100.20
+    en algunos programas como JS todos son números. 
+Tipado Estadito o Static Typed Laguages
+Exiten lenguajes que cuando se agrega un tipo de dato a una variable solo puede recibir
+valores de ese tipo, por ejemplo JAVA o C#
+por ejemplo: 
+int edad = 50 (estoy diciendo que la variable edad es Integer y solo puede recibir enteros)
+por lo tanto si le coloco otro valor luego me va a dar un error
+edad = 51 //va a dar ok
+edad = 51.05 o "java" //me va a dar un error
+
+Tipado Dinamico - Python
+que son mas flexibles en este sentido es decir que puedo reasignar el valor de la variable 
+simplemente cambiando su valor (js-ruby-python-php)
+edad = 50
+edad = 51.05
+edad = "String"
+
+Funciones y Métodos
+
+Una funcion es un bloque de código diseñado para realizar una actividad - Existen funciones del 
+Lenguaje y otras necesito crear. 
+La palabra reservada para crear una función en Python:
+def nombre_de_funcion(): {}
+    cuando creamos funciones tenemos que hacer dos pasos:
+    1- Definir (crear) la función 
+        def mi_función()
+    2- Ejecutar la función
+        mi_funcion()
+En Py siempre hay que crear la función antes de llamarla. Recordar que 
+todo lo que este identado debajo de la función va a ser parte. Por eso es IMPORTANTE
+
+#Funciones 1
+#Definimos la Función
+def nombre_funcion():
+    print("Soy la función")
+#llamamos la función
+nombre_funcion()
+#la identaciónes importante por que va a definir si esta o no dentro de la funcion creada. 
+
+def informacion(nombre, puesto, lugar = 'Desconocido'):  #dentro del () agrego parametros
+    print(f'Hola soy {nombre}, soy {puesto} y soy de {lugar} ')
+
+informacion('Pedro', 'programador', 'Posadas')
+informacion('Juan', 'Administrativo', 'Iguazú')
+informacion('Itzel', 'el jefe')
+
+#En este caso vamos a utilizar una Def que return un valor, 
+#para este caso retorna el nombre 
+def funcion_retorno_valor(nombre):        #defino la función que quiero que retorne un valor
+    return nombre
+
+empleado = funcion_retorno_valor('Juan')  #asigno esa Def a una variable nueva 
+
+print(empleado) #cuando imprimo esa variable me va a traer el retorno de la función. 
+
+#Método tiene una diferencia con las Funciones
+#para una función
+#mostrarNombre(nombre) = nombredelaFuncion(variable)
+
+#para un método
+# nombrevar.upper() = nombredelaVariable.nombreFuncion()
+
+print("==== Probando funciones y Metodos =====")
+nombre1 = "Pedro"
+
+#defino una función
+def mostrar_nombre(nombre1):
+    print(f'Hola {nombre1}')
+
+mostrar_nombre(nombre1)
+
+#si quiero convertir todo a mayuscula utilizo un metdo por ejemplo UPPER
+
+print(nombre1.upper())
+print(nombre1.title())
+
+7 - ===NUMEROS Y OPERADORES===
+Números en Programación tipos de números y OPERADORES
+
+Entradas son los numeros y operando son los simbolos = 2 + 3 
++ - * / % 
+
+Orden y Comentarios
+Se comenta el código por razones de recordatorio y por 
+si se trabaja con otros programadores - Hay que ser claro y comentar lo importante.
+# Es una buena practica comentar para que se entienda la estructura del código 
+# es importante resaltar lo importante por ejemplo 
+# Comentario como titulo 
+o si tengo un código y quiero #aclarar algo a lado
+
+Importancia del Espaciado y el Orden en el Código
+Es importante para trabajar sobre todo en colaboración. 
+En python es importante mantener la Identación adecuada
+pero en general cada lenguaje tiene sus reglas de identación. Es buena práctica para 
+encontrar errores y para el trabajo colaborativo. 
+Tambien es evaluado en las entrevistas de trabajo. 
+
+Arreglos - Array - En Python es una List
+En una sola variable permite agrupar información.
+Usualmente un array puede contener cualquier tipo de dato e incluso datos que no sean muy 
+relacionados entre si, o incluso que no esten realacionados. 
+(se recomienda que si esten relacionados)
+Agrupamos información en una sola variable. 
+arreglos en Py
+
+meses = ["Enero", "Febrero", "Marzo"]:
+            0       1           2
+como accedemos a esta lista: utilizamos nombredelaVariable[posición]
+
+meses[0] //tomaria Enero (ya que la primera posición es 0)
+meses[2] //Marzo
+
+=====ITERADORES ======
+"Bucles" Cuando queremos hacer correr el código un determinado número de ocasiones 
+hasta que una condición se cumpla (o se deje de cumplir)
+
+puedo hacer recorrer una lista
+variables = [var1, var2, var3...varn]
+
+for variable in variables:
+    print(variable)
+    
+todo lo que este identado debajo del FOR va a correr como parte del Bucles
+
+Tambien podemos hacer imprimir un rango de númeors:
+
+for variable in range(0, num)
+    print(variable)
+
+va a imprimir la cantidad de posiciones de 0 a num-1 (ya que el cero cuenta como una posición)
+
+ESCRIBIR CÓDIGO CONDICIONAL:
+A veces necesitamos que el código se ejecute de acuerdo a ciertas condiciones
+Por ejemplo: Si un usuario esta logueado, si tiene salgo en su cuenta, si un chofer esta cerca, estructura
+
+el Condiciona IF en python:
+
+balance = 500
+
+if balance > 0:
+    print("Puedes Pagar")
+
+Como opera el IF?
+
+if condicion >< == != >= <= num:
+    Instrucción
+
+CONDICIONALES ANIDADOS:
+podemo utilizar varios If anidados en una condición 
+para continuar evaluando (puede ser útil para diferentes situaciones)
+
+IF..ELIF ..ELSE
+En algunas ocasiones deseamos evaluar una condicion u otra.
+y realizar diferentes acciones según sea el caso.
+
+ocupacion = "Estudiante" 
+
+if ocupacion == "Jubilado":
+    print("Tienes 75% de Descuento")
+elif ocupacion == "Estudiante":
+    print("Tienes 50% de Descuento")
+else: 
+    print("No tienes descuento")
+
+REVISANDO 2 O MAS condiciones
+
+IF Y ELIF REVISARAN QUE SE CUMPLA UNA condición
+PERO ALGUNAS VECES REQUERIMOS QUE SE CUMPLAN DOS O MAS CONDCIONES O ALMENOS UNA
+
+operadores: and y Or 
+
+CONDICIONALES, LISTAS E ITERADORES
+PODEMOS COMBINAR TODAS LAS INSTRUCCIONES EN PYTHON 
+SEGÚN LO QUE ESTEMOS PROGRAMANDO. 
+
+Unidad 4  - Funciones y Estructura de datos
+FUNCIONES: bloques de códigos que realizan una tarea específica. Permiten reutilizar código
+ESTRUCTURA DE DATOS: Permiten organizar los datos para que la manipulación sea mas sencilla.
+
+Funciones: Reducen la cantidad de líneas de código en el proyecto
+            Facilitan la depuración
+            Limitan los errores de escritura.
+para escribir funciones en Python:
+
+def nombreFuncion(para,me,tros) :
+    instrucciones.
+
+DEFINIR FUNCIONES CON PARÁMETROS
+
+def nombre_funcion(param1 , param2)
+los parametiros son valores que enviamos dentro de la función, luego cuando 
+agregamos argumentos esos parametros toman esos valores para realizar la operación de la función.
+
+Objetos en Programación
+
+Un objeto es en cierta medida similar a un array, te permite agrupar contenido de diferentes tipos de datos.
+Usualmente se accede a un elemento de un array por medio de su indice, 
+en un objeto se accede por medio de una llave (key)
+
+Algunos lenguajes no soportan Objetos, en Python se utiliza Dictionary
+
+
+ENTRADA DE DATOS
+-La mayoria del código que se desarrolle tiene como fin solucionar un problema del usuario
+-Publicar en tu muro, realizar un examen en línea, subir una imagen, solicitar un taxi, crear un evento, realizar un pago, etc.
+son acciones que requieren entrada de datos por parte del usuario.
+-En python se utiliza la función input() para detener la función del programa hasta que 
+el usuario agregue información. 
+
+reto:
+Realizar un examen con 3 preguntas que desees, el usuario debera Responder "Si" o "No"
+y al final otorgarle una calificación (la calificación se logra con una variable que inicia
+en 0 y por cada respuesta correcta incrementa en 1)
+
+WHILE Y FOR
+(FOR SE EJECUTA AL MENOS UNA VEZ POR CADA ELEMENTO DE LA COLECCION)
+CUANDO TRABAJAMOS CON FOR VIMOS QUE UN FOR SE EJECUTA DETERMINADO 
+NÚMERO DE OCASIONES SEGÚN SEAN LOS ELEMENTOS DE UNA COLECCIÓN (COMO UN ARREGLO)
+
+WHILE
+SE EJECUTA MIENTRAS LA CONDICIÓN SE VERDADERA
+
+Creamos un play lista
+.
+cuando creamos una aplicación es mejor siempre crear una función antes
+que haga funcionar nuestra aplicación
+.
+playlist = {diccionario}
+playlist['canciones'] = [] lista vacia de canciones
+
+definimos la función con def 
+def app():
+
